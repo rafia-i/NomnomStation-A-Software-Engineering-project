@@ -1,0 +1,62 @@
+
+
+.landing-container {
+  text-align: center;
+  padding-top: 80px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcome-board {
+  background-color: #d35400;
+  color: white;
+  padding: 40px 20px; 
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(211, 84, 0, 0.5);
+  margin-bottom: 50px;
+}
+
+.welcome-board h1 {
+  margin-bottom: 12px;
+  font-size: 2.8rem;
+  letter-spacing: 1.2px;
+}
+
+.welcome-board p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.auth-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.auth-buttons .btn {
+  padding: 12px 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.login-btn {
+  background-color: #2980b9;
+}
+
+.login-btn:hover {
+  background-color: #3498db;
+}
+
+.register-btn {
+  background-color: #27ae60;
+}
+
+.register-btn:hover {
+  background-color: #2ecc71;
+}

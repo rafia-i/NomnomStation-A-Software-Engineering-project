@@ -1,0 +1,440 @@
+html, body {
+  min-height: 100%; 
+  margin: 0;        
+}
+
+body {
+  background: url('/images/pngtree-raw-food-composition-for-banner-copy-space-vegan-healthy-eating-material-png-image_11568317.png')
+              center / cover no-repeat fixed; 
+  color: #fff;      
+}
+
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0); 
+  z-index: 0;
+}
+
+
+#root, .page.container {
+  position: relative;
+  z-index: 1;  
+}
+
+.page.container {
+  max-width: none;
+  padding: 0 2rem 2rem 2rem;   
+}
+
+.topbar {
+  position: relative;
+  z-index: 2;
+  width: 100vw;                         
+  margin-left: calc(50% - 50vw);        
+  margin-right: calc(50% - 50vw);
+  background: #135830;   
+  color: #fff;
+  display: flex;
+  justify-content: space-between;       
+  align-items: center;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+}
+
+
+.topbar .welcome {
+  margin: 0;        
+  padding: 0;       
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #def0d7; 
+}
+
+
+.logo {
+  height: 40px;   
+  width: auto;    
+  display: block;
+}
+
+
+
+
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 1.5rem;  
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;        
+  font-weight: 600;       
+  color: #135830;         
+}
+
+.filter label {
+  font-size: 1.1rem;      
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.filter .input {
+  padding: 0.7rem 1rem;   
+  border: 2px solid #ccc; 
+  border-radius: 0.4rem;
+  font-size: 1rem;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto 2rem auto;     
+  background: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.9rem 1rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-btn {
+  
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;   
+}
+
+.search-btn .btn-icon {
+
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.btn.primary.search-btn {
+  background: transparent;
+  border: none;
+  padding: 0.5rem;         
+  box-shadow: none;
+}
+
+
+.btn.primary.search-btn:focus,
+.btn.primary.search-btn:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.btn.primary.search-btn::-moz-focus-inner {
+  border: 0;
+}
+
+
+.search-btn .btn-icon {
+  width: 20px;
+  height: 20px;
+  display: block;
+  object-fit: contain;
+}
+
+
+.search-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+
+
+.browse-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  background: #135830;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: filter 0.2s ease;
+}
+.browse-btn:hover {
+  filter: brightness(1.1);
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: none;            
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+
+.modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  width: min(500px, 90%);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #135830;
+  text-align: center;
+}
+
+
+.modal .filters-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal .filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #135830;
+}
+
+.modal .input {
+  padding: 0.7rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #fafafa;
+}
+.modal .input:focus {
+  outline: none;
+  border-color: #135830;
+  background: #fff;
+}
+
+
+.modal-close {
+  display: block;
+  margin: 0 auto;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: #ff7043;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.modal-close:hover {
+  background: #f4511e;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.card.feature.vegan {
+  background: url('/images/66cc6a2cf0ed1150c428df3e_vegan.jpeg');
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.card.feature.halal {
+  background: url('/images/halal-food-in-Japan-with-halal-logo.jpg');
+  padding: 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.card.feature h3 {
+  margin: 0 0 0.5rem;
+}
+
+.card.feature p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.card.recipe {
+  background: white;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.card.recipe .thumb {
+  height: 140px;
+  background: #e0e0e0;
+}
+
+.card-body {
+  padding: 0.8rem 1rem;
+}
+
+.card-title {
+  font-weight: 600;
+  margin: 0 0 0.3rem;
+}
+
+.card-sub {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.fab-upload {
+  position: fixed;
+  right: 24px;
+  bottom: calc(24px + env(safe-area-inset-bottom, 0px)); 
+  width: 56px;
+  height: 56px;
+  border-radius: 9999px;
+  background: #135830;         
+  color: #fff;                  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 4px 8px rgba(0,0,0,0.15);
+  z-index: 900;                 
+  transition: transform 120ms ease, filter 200ms ease, box-shadow 200ms ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.fab-upload:hover { 
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+.fab-upload:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.22), 0 3px 6px rgba(0,0,0,0.14);
+}
+
+
+.fab-upload:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,0.9),
+    0 0 0 6px rgba(19,88,48,0.55),
+    0 10px 20px rgba(0,0,0,0.25);
+}
+
+
+
+
+.section.feature-grid + .roam-cta-section {
+  margin-top: 50px;  
+}
+
+.roam-cta-section { margin-top: 24px; }
+
+.roam-cta {
+  position: relative;
+  display: block;
+  height: 240px;
+  border-radius: 18px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 16px 48px rgba(0,0,0,.18);
+}
+
+.roam-cta__bg {
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.45)),
+    url("/images/AdobeStock_594821637-scaled.jpeg") center/cover no-repeat;
+  
+  filter: saturate(105%);
+}
+
+.roam-cta__content {
+  position: relative; z-index: 1;
+  color: #fff;
+  height: 100%;
+  display: grid;
+  align-content: center;
+  gap: 8px;
+  padding: 24px 28px;
+}
+
+.roam-cta__title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.roam-cta__sub {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  opacity: .95;
+}
+
+.roam-cta__button {
+  align-self: start;
+  display: inline-block;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+}
+.roam-cta:hover .roam-cta__button { filter: brightness(0.95); }

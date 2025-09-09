@@ -1,0 +1,75 @@
+
+.admin-fab {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  padding: 10px 14px;
+  font-size: 12px;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  background: #0f766e;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+
+
+.admin-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: grid;
+  place-items: center;
+  z-index: 70;
+}
+
+.admin-modal {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+
+.admin-modal-title {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.admin-modal-form {
+  display: grid;
+  gap: 12px;
+}
+
+.admin-field span {
+  display: block;
+  font-size: 12px;
+  color: #475569;
+  margin-bottom: 6px;
+}
+
+.admin-field input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+}
+
+.admin-field input:focus {
+  border-color: #0f766e;
+  box-shadow: 0 0 0 3px rgba(15,118,110,.15);
+}
+
+.admin-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.btn.primary { background:#0f766e; color:#fff; border:none; padding:10px 14px; border-radius:10px; }
+.btn.secondary { background:#e2e8f0; color:#111827; border:none; padding:10px 14px; border-radius:10px; }
+.btn.tertiary { background:transparent; color:#475569; border:1px solid #cbd5e1; padding:10px 14px; border-radius:10px; }
